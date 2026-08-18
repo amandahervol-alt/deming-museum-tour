@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome Center & Historic 1916 Armory",
+    "subtitle": "The Building's Story",
+    "audio": "audio/room_1.mp3",
+    "duration": "1:45",
+    "transcript": "Welcome to the Deming Luna Mimbres Museum! You are standing in the historic 1916 red-brick National Guard Armory, listed on the National Register of Historic Places. Originally built for the New Mexico National Guard Company I during a time of intense border tensions, this building was later converted into a community center and museum by the Luna County Historical Society. As you walk through our 15 featured rooms today, notice the heavy exposed roof trusses and original brickwork that have witnessed over a century of Southwest history.",
+    "highlights": ["1916 Red-Brick Architecture", "Company I National Guard Guardhouse", "Luna County Historical Society Origins"]
+  },
+  {
+    "id": 2,
+    "title": "Mimbres Pottery & Prehistoric Culture",
+    "subtitle": "A.D. 1000–1130 Masterpieces",
+    "audio": "audio/room_2.mp3",
+    "duration": "2:15",
+    "transcript": "Step back over a thousand years into the world of the Mimbres people, a branch of the Mogollon culture who inhabited the Mimbres River valley from roughly A.D. 1000 to 1130. The Mimbres are internationally famous for their black-on-white painted pottery bowls. Notice the stylized animals, geometric patterns, and human figures painted with remarkable precision. Look closely at the center of many bowls—you will see a single small hole. Known as a 'kill hole,' this ceremonial puncture was created before burial to release the spirit of the vessel.",
+    "highlights": ["Black-on-White Painted Bowls", "Ceremonial 'Kill Holes'", "Naturalist & Geometric Designs"]
+  },
+  {
+    "id": 3,
+    "title": "Military & Veterans Memorial Room",
+    "subtitle": "Honoring Service Across Generations",
+    "audio": "audio/room_3.mp3",
+    "duration": "2:05",
+    "transcript": "This room honors the men and women of Deming and Luna County who served in the United States Armed Forces. Deming has a rich military heritage, from the 200th Coast Artillery during World War II—who endured the Bataan Death March—to local veterans who served in WWI, WWII, Korea, Vietnam, and modern conflicts. Exhibited here are authentic uniforms, equipment, victory medals, and personal letters from local service members who defended our freedom.",
+    "highlights": ["200th Coast Artillery & Bataan Tribute", "WWI & WWII Authentic Uniforms", "Personal Service Artifacts & Medals"]
+  },
+  {
+    "id": 4,
+    "title": "Pioneer & Homesteaders Gallery",
+    "subtitle": "Settling the Mimbres Valley",
+    "audio": "audio/room_4.mp3",
+    "duration": "1:55",
+    "transcript": "When homesteaders arrived in Deming in the late 19th and early 20th centuries, they faced a dry, rugged frontier. Through grit, well-drilling, and cattle ranching, families turned the desert valley into a bustling community. This exhibit displays authentic frontier furniture, cabin tools, washboards, and oil lamps used in everyday homestead life before electricity arrived in Southern New Mexico.",
+    "highlights": ["Hand-carved Cabin Furniture", "Early Well-drilling Equipment", "Off-grid Homestead Utensils"]
+  },
+  {
+    "id": 5,
+    "title": "Historic Quilt & Textile Collection",
+    "subtitle": "Artistry in Stitches",
+    "audio": "audio/room_5.mp3",
+    "duration": "1:40",
+    "transcript": "You are viewing one of the largest and most prized quilt collections in the Southwest. Dating from the mid-1800s to the 1950s, these hand-stitched quilts represent thousands of hours of painstaking needlework. Featured patterns include the Crazy Quilt, Wedding Ring, Log Cabin, and Star of Bethlehem, crafted by pioneer women using repurposed fabric scraps, silk ribbons, and flour sacks.",
+    "highlights": ["19th-Century Hand-stitched Quilts", "Victorian Crazy Quilts", "Depression-Era Feedsack Textiles"]
+  },
+  {
+    "id": 6,
+    "title": "Antique Doll & Toy Gallery",
+    "subtitle": "Playtimes of Yesterday",
+    "audio": "audio/room_6.mp3",
+    "duration": "1:35",
+    "transcript": "Step into a world of childhood nostalgia. Our doll room contains hundreds of antique porcelain, bisque, china head, and composition dolls dating back to the Victorian era. Alongside European imports from Germany and France, you will see hand-carved wooden toys, cast-iron miniature stoves, and dollhouses crafted by local grandfathers for children over a century ago.",
+    "highlights": ["German Bisque & China Head Dolls", "Victorian Dollhouses", "Cast-Iron Mechanical Toys"]
+  },
+  {
+    "id": 7,
+    "title": "Transportation & Frontier Buggies",
+    "subtitle": "From Horsepower to Horseless Carriages",
+    "audio": "audio/room_7.mp3",
+    "duration": "1:50",
+    "transcript": "Before paved highways connected the Southwest, transportation relied on wooden wheels and animal power. In this hall, view restored 19th-century doctor's buggies, heavy freight wagons, side-saddles, and early motorized farm vehicles. These vehicles braved dirt trails between Silver City, Deming, and Columbus, NM, carrying mail, supplies, and passengers.",
+    "highlights": ["1890s Doctor's Buggy", "Heavy Freight Wagon", "Early Southwestern Stage Line Artifacts"]
+  },
+  {
+    "id": 8,
+    "title": "Deming Railroad & Southern Pacific Gallery",
+    "subtitle": "Where the Rails Met in 1881",
+    "audio": "audio/room_8.mp3",
+    "duration": "2:00",
+    "transcript": "On March 8, 1881, Deming became a crucial milestone in American history when the Southern Pacific and Atchison, Topeka and Santa Fe railroads joined here, creating the nation's second transcontinental railroad link! Deming was named after Mary Ann Deming, wife of railroad tycoon Charles Crocker. Explore lantern collections, telegraph keys, train timetables, and conductor uniforms that tell the story of the iron horse.",
+    "highlights": ["1881 Silver Spike & Rail Join Landmark", "Original Morse Code Telegraph Keys", "Southern Pacific Railroad Uniforms"]
+  },
+  {
+    "id": 9,
+    "title": "Ranching, Tack & Livestock Brand Room",
+    "subtitle": "Life on the Open Range",
+    "audio": "audio/room_9.mp3",
+    "duration": "1:45",
+    "transcript": "Ranching has been the economic heartbeat of Luna County for generations. This room showcases hand-tooled leather saddles, silver spurs, lariats, and an extensive collection of historical livestock branding irons registered to local ranches. Learn how cowboys navigated cattle drives across dry desert terrain and protected livestock from predators and droughts.",
+    "highlights": ["Registered Luna County Branding Irons", "Hand-tooled Leather Saddles", "Antique Chuckwagon Cookware"]
+  },
+  {
+    "id": 10,
+    "title": "Pioneer Kitchen & Domestic Life",
+    "subtitle": "Heart of the Southwest Home",
+    "audio": "audio/room_10.mp3",
+    "duration": "1:35",
+    "transcript": "Welcome to an early 1900s Southwestern kitchen. Here you will see heavy cast-iron woodburning stoves, hand-crank butter churns, iceboxes, and copper kettles. Cooking required intense labor and skill, especially during hot New Mexico summers. Notice the coffee grinders and stone lard presses that were essential fixtures in every pioneer household.",
+    "highlights": ["Monarch Cast-Iron Range", "Hand-crank Wooden Butter Churns", "Antique Icebox & Copper Kettles"]
+  },
+  {
+    "id": 11,
+    "title": "Main Street Merchant & Barber Shop",
+    "subtitle": "Commerce in Early Deming",
+    "audio": "audio/room_11.mp3",
+    "duration": "1:40",
+    "transcript": "Walk down memory lane on early Deming's Main Street! This re-creation includes an authentic turn-of-the-century barber shop complete with a red porcelain barber chair, straight razors, and tonic bottles. Next to it are storefront displays from early dry goods merchants, cobbler tools, and NCR brass cash registers that served local townspeople.",
+    "highlights": ["1900 Koken Porcelain Barber Chair", "Brass National Cash Registers", "Cobbler & Leatherworking Tools"]
+  },
+  {
+    "id": 12,
+    "title": "Geode, Mineral & Rockhound Room",
+    "subtitle": "Geological Treasures of Luna County",
+    "audio": "audio/room_12.mp3",
+    "duration": "2:10",
+    "transcript": "Deming is world-famous among rockhounds! Nearby Rockhound State Park is one of the few places in the world where visitors can legally keep the minerals and thunder eggs they find. This room displays an extraordinary collection of cut geodes, agate, jasper, quartz crystals, and fluorescent minerals that glow vividly under ultraviolet light.",
+    "highlights": ["Fluorescent Mineral UV Display", "Cut & Polished Thunder Eggs", "Luna County Agate & Jasper"]
+  },
+  {
+    "id": 13,
+    "title": "Pancho Villa Raid & Border History",
+    "subtitle": "The 1916 Columbus Raid",
+    "audio": "audio/room_13.mp3",
+    "duration": "2:20",
+    "transcript": "On March 9, 1916, Mexican revolutionary General Francisco 'Pancho' Villa launched a surprise raid on the town of Columbus, NM, just 30 miles south of Deming. In response, President Woodrow Wilson dispatched General John J. 'Black Jack' Pershing on the Punitive Expedition into Mexico. This room houses weapons, photographs, military dispatches, and artifacts from Camp Furlong and the border conflict.",
+    "highlights": ["March 9, 1916 Raid Artifacts", "General Pershing Expedition Gear", "Camp Furlong Relics & Photos"]
+  },
+  {
+    "id": 14,
+    "title": "Deming Fire Department & Early Services",
+    "subtitle": "Protecting the Frontier Town",
+    "audio": "audio/room_14.mp3",
+    "duration": "1:30",
+    "transcript": "In a town built largely of wood and dry adobe during the railroad era, fire protection was a matter of life and death. This gallery showcases early hand-drawn hose carts, brass fire extinguishers, leather helmets, and the original alarm bells that alerted Deming's volunteer firefighters to emergencies across town.",
+    "highlights": ["1890s Hand-drawn Hose Cart", "Brass Chemical Fire Extinguishers", "Original Volunteer Fire Bell"]
+  },
+  {
+    "id": 15,
+    "title": "Custom House & Historic Outbuildings",
+    "subtitle": "Border Commerce & Customs",
+    "audio": "audio/room_15.mp3",
+    "duration": "1:50",
+    "transcript": "Thank you for completing the tour! Outside the main armory stands the historic Custom House, managed by the museum. Built during the era when international trade passed between Mexico and New Mexico territory, it preserves office records, customs stamps, and boundary survey equipment that shaped the border region.",
+    "highlights": ["Historic Border Customs Records", "19th-Century Boundary Survey Tools", "Museum Annex & Courtyard"]
+  }
+]

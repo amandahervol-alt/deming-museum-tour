@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deming Luna Mimbres Museum - Interactive Guide</title>
+  <meta name="description" content="Official QR Audio Guide and AI Docent for the Deming Luna Mimbres Museum in Deming, New Mexico.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <h1 class="museum-title">Deming Luna Mimbres Museum</h1>
+    <p class="museum-subtitle">Historic 1916 Armory • Deming, NM</p>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Room Selector Dropdown Card -->
+    <div class="room-selector-card">
+      <label for="roomSelect" class="room-selector-label">Select Exhibit Room</label>
+      <select id="roomSelect" class="room-select">
+        <!-- Dynamically populated via app.js -->
+      </select>
+    </div>
+
+    <!-- Main Exhibit Display Card -->
+    <article class="exhibit-card">
+      
+      <!-- Exhibit Banner Header -->
+      <header class="exhibit-banner">
+        <span id="roomBadge" class="room-badge">Room 1 of 15</span>
+        <h2 id="exhibitTitle" class="exhibit-title">Loading Exhibit...</h2>
+        <p id="exhibitSubtitle" class="exhibit-subtitle"></p>
+      </header>
+
+      <!-- Audio Player Controls Section -->
+      <section class="audio-section" aria-label="Audio Guide Player">
+        <div class="audio-controls-row">
+          <button id="btnPlayPause" class="btn-play-pause" aria-label="Play Audio">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="progress-container">
+            <div class="time-display">
+              <span id="currentTimeDisplay">0:00</span>
+              <span id="totalTimeDisplay">1:45</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div id="progressBarFill" class="progress-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exhibit Highlights Pills -->
+      <section class="highlights-container">
+        <h3 class="highlights-title">Exhibit Highlights</h3>
+        <div id="highlightsPills" class="pills-row">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- Speech & Text Transcript Section -->
+      <section class="transcript-section">
+        <h3 class="section-header-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Audio Speech Transcript
+        </h3>
+        <p id="transcriptText" class="transcript-body">Loading transcript text...</p>
+      </section>
+
+    </article>
+
+    <!-- Room Prev / Next Navigation -->
+    <nav class="room-nav-row" aria-label="Room Navigation">
+      <button id="btnPrevRoom" class="btn-nav">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Previous Room
+      </button>
+      <button id="btnNextRoom" class="btn-nav">
+        Next Room
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </nav>
+
+  </main>
+
+  <!-- Floating AI Docent Launcher Button -->
+  <button id="aiDocentFab" class="ai-fab" aria-label="Ask AI Museum Docent">
+    <span class="ai-fab-icon">🤖</span>
+    <span>Ask AI Docent</span>
+  </button>
+
+  <!-- AI Docent Chat Modal Drawer -->
+  <div id="chatModalOverlay" class="modal-overlay">
+    <div class="chat-modal">
+      <div class="chat-header">
+        <div>
+          <h3 class="chat-title">Deming Museum AI Docent</h3>
+          <p style="font-size:0.75rem; opacity:0.85;">Ask anything about our exhibits & local history!</p>
+        </div>
+        <button id="chatCloseBtn" class="chat-close-btn" aria-label="Close Chat">&times;</button>
+      </div>
+      <div id="chatMessages" class="chat-messages">
+        <div class="message-bubble bot">
+          Welcome! I am your AI Docent for the Deming Luna Mimbres Museum. Ask me anything about our 15 rooms, Mimbres pottery, the 1916 Armory, or local Deming history!
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" class="chat-input" placeholder="e.g. Why is there a hole in the Mimbres bowls?" />
+        <button id="btnSendChat" class="btn-send" aria-label="Send Message">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/ai-docent.js"></script>
+</body>
+</html>

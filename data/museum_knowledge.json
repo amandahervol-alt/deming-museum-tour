@@ -1,0 +1,69 @@
+{
+  "museum_name": "Deming Luna Mimbres Museum",
+  "location": "301 S. Silver Avenue, Deming, New Mexico 88030",
+  "nickname": "Smithsonian of the Southwest",
+  "admission": "Free admission (donations gladly accepted)",
+  "governance": "Luna County Historical Society (Volunteer-run)",
+  "building": {
+    "name": "1916 National Guard Armory",
+    "historical_status": "Listed on the National Register of Historic Places",
+    "size": "Approximately 25,000 square feet",
+    "history": "Built in 1916 for the New Mexico National Guard Company I during border tensions. Later used as a community hall, armory, and finally established as the county museum."
+  },
+  "key_collections": {
+    "mimbres_pottery": {
+      "era": "A.D. 1000 to 1130",
+      "culture": "Mimbres branch of the Mogollon culture",
+      "significance": "World-famous black-on-white painted ceramic bowls depicting realistic wildlife, geometric art, and human figures.",
+      "kill_hole": "Ceremonial small hole punctured in the center of bowls prior to burial to release the vessel's spirit."
+    },
+    "quilt_collection": {
+      "size": "One of the largest hand-stitched quilt displays in the American Southwest.",
+      "eras": "Mid-1800s to 1950s",
+      "popular_styles": "Crazy Quilts, Log Cabin, Wedding Ring, feedsack fabrics."
+    },
+    "dolls_and_toys": {
+      "highlights": "Hundreds of antique Victorian bisque, porcelain, china head, and composition dolls, plus miniature cast-iron toys and dollhouses."
+    },
+    "railroad_history": {
+      "event": "Joining of Southern Pacific and Santa Fe railroads on March 8, 1881, forming America's 2nd transcontinental railroad connection.",
+      "namer": "Deming was named after Mary Ann Deming, wife of railroad tycoon Charles Crocker."
+    },
+    "geodes_and_minerals": {
+      "highlights": "Extensive collection of local thunder eggs, agates, geodes, quartz, and a darkroom display of UV-fluorescent minerals.",
+      "local_park": "Rockhound State Park, located 12 miles southeast of Deming, where visitors can collect up to 15 pounds of rocks to keep."
+    },
+    "military_and_bataan": {
+      "significance": "Honors local service members, particularly the 200th Coast Artillery (AA) during WWII who endured the Bataan Death March in the Philippines."
+    },
+    "pancho_villa_raid": {
+      "date": "March 9, 1916",
+      "location": "Columbus, NM (30 miles south of Deming)",
+      "general": "General John J. Pershing led the Punitive Expedition out of Camp Furlong into Mexico."
+    }
+  },
+  "local_deming_info": {
+    "nearby_attractions": [
+      "Rockhound State Park (12 miles SE) - Geode & mineral hunting",
+      "Spring Canyon State Park (Florida Mountains)",
+      "City of Rocks State Park (28 miles N) - Unique volcanic rock monolith formations",
+      "Columbus, NM & Pancho Villa State Park (30 miles S)",
+      "Historic Custom House (adjacent to museum)"
+    ],
+    "dining_and_hospitality": "Deming is famous for Southwestern New Mexican cuisine, green chile dishes, local wineries (St. Clair / Lescombes Winery), and friendly local hospitality."
+  },
+  "faqs": [
+    {
+      "q": "How long does a typical tour take?",
+      "a": "Visitors usually spend between 1 to 2 hours exploring our 15 featured spaces and 47 exhibit rooms."
+    },
+    {
+      "q": "Is photography allowed?",
+      "a": "Yes! Non-commercial photography is welcomed. We encourage visitors to share photos of their visit!"
+    },
+    {
+      "q": "Are there restrooms and accessibility features?",
+      "a": "Yes, ground-level restrooms and ramp access are available for visitors with mobile needs."
+    }
+  ]
+}
