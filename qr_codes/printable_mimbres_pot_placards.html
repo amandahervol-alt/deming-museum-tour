@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deming Museum Tour — Mimbres Pot QR Placards (Printable)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4efe6;
+      color: #2d241e;
+      padding: 30px;
+    }
+    .print-controls {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .print-btn {
+      background: #c46231;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(196,98,49,0.3);
+    }
+    .print-btn:hover { background: #a64e22; }
+    
+    .placards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pot-card {
+      background: #fff;
+      border: 1px dashed #c4b5a2;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      page-break-inside: avoid;
+    }
+
+    .pot-container {
+      position: relative;
+      width: 360px;
+      height: 432px;
+    }
+
+    .pot-svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 6px 12px rgba(140,75,39,0.15));
+    }
+
+    .pot-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: none;
+      padding: 42px 30px 20px;
+      text-align: center;
+    }
+
+    .pot-header {
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .room-num {
+      display: inline-block;
+      background: #c46231;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 2px 10px;
+      border-radius: 12px;
+      margin-bottom: 4px;
+    }
+
+    .room-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #2d241e;
+      line-height: 1.25;
+      max-width: 240px;
+    }
+
+    .room-sub {
+      font-size: 11px;
+      color: #785a44;
+      margin-top: 2px;
+    }
+
+    .pot-qr {
+      margin-top: 18px;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pot-qr img {
+      width: 130px;
+      height: 130px;
+      border-radius: 6px;
+    }
+
+    .pot-footer {
+      margin-top: 28px;
+    }
+
+    .scan-cta {
+      font-size: 12px;
+      font-weight: 700;
+      color: #c46231;
+    }
+
+    .museum-tag {
+      font-size: 9px;
+      color: #8c7664;
+      margin-top: 2px;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .print-controls { display: none; }
+      .placards-grid { display: block; }
+      .pot-card {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        page-break-after: always;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pot-container {
+        width: 480px;
+        height: 576px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-controls">
+    <div>
+      <h2 style="color:#c46231; margin-bottom:4px;">🏺 Mimbres Pottery QR Tour Placards</h2>
+      <p style="font-size:14px; color:#665;">Complete 15-Room Set — Ready to print on standard letter cardstock or die-cut.</p>
+    </div>
+    <button class="print-btn" onclick="window.print()">🖨️ Print All 15 Placards</button>
+  </div>
+
+  <div class="placards-grid">
+    
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep1" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad1)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 1</span>
+                <h3 class="room-title">Welcome Center & Historic 1916 Armory</h3>
+                <p class="room-sub">The Building's Story</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 1" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep2" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad2)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 2</span>
+                <h3 class="room-title">Mimbres Pottery & Prehistoric Culture</h3>
+                <p class="room-sub">A.D. 1000–1130 Masterpieces</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 2" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad3" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep3" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad3)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 3</span>
+                <h3 class="room-title">Military & Veterans Memorial Room</h3>
+                <p class="room-sub">Honoring Service Across Generations</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 3" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad4" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep4" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad4)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 4</span>
+                <h3 class="room-title">Pioneer & Homesteaders Gallery</h3>
+                <p class="room-sub">Settling the Mimbres Valley</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 4" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad5" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep5" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad5)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 5</span>
+                <h3 class="room-title">Historic Quilt & Textile Collection</h3>
+                <p class="room-sub">Artistry in Stitches</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 5" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad6" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep6" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad6)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 6</span>
+                <h3 class="room-title">Antique Doll & Toy Gallery</h3>
+                <p class="room-sub">Playtimes of Yesterday</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 6" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad7" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep7" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad7)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 7</span>
+                <h3 class="room-title">Transportation & Frontier Buggies</h3>
+                <p class="room-sub">From Horsepower to Horseless Carriages</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 7" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad8" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep8" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad8)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 8</span>
+                <h3 class="room-title">Deming Railroad & Southern Pacific Gallery</h3>
+                <p class="room-sub">Where the Rails Met in 1881</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 8" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad9" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep9" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad9)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 9</span>
+                <h3 class="room-title">Ranching, Tack & Livestock Brand Room</h3>
+                <p class="room-sub">Life on the Open Range</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqCAIAAABED5ptAAALzUlEQVR4nO3dwW0jyxlG0ZExgTAAp+DonYIDYBwCBHk7b9MYT71y/bf7nL2oZpO6aAj4UB/fX58/AKj5x+kLAOBPyDdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMk/Vz54dc///XjXt7/+femu3H9yis/e8rMT3/lPq+88rV9v7f4rdt3zUUr99nTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTfA81aX12wFJyzN9u3uZi5Ui8vJFfvuVXHP+X7YPtnTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0sbV5akl0tPO6Ft5vzNXak87+/HaqW/O/U6VfI38G1zh6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIOnY6vJp9m0jZ25B97nfNa+cKfq0u8GvPH0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyRZXebXj6dWajPvxrWnvfKprS//H56+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGSjq0u73ei3cwl4dPu84p9n9Gpze2+Vy5+r97Ba77m6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIGnj6vJ+p+Ht2zeeOjfyfucZ3m+DOvPzPfWdXLmq+/H0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2Q9PH99Xn6Gjh22uGphdupa74288zJFTMXjMXt60yevgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkjaedXm//du+tdj9dminTlnk73K/7+S1mWW45ukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkG+B5q8uVMwlPncF4ah916qqK77e4f5tp5nr5lPftvhuevgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bkj6+vz5/PMmpHdqpneH91nGn7vOKUyvimd/JazP32K9t35yVd+TpGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BvgeWddFtdTp7ZVM0/gvLbvM9r3syuKn8LMXeXM00rfhz7ffb/X0zdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3wPPOuiyeo3jNwm3++rG4FbzfNnLFzPf7Hnk+5zVP3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QJN8Az1tdXjt13l3xVMniO9q32Tu1FTx1tmdxG1m8G+9tfylWlwD8D/zzBCBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGSNq4ur+07/e9+P3utuEO7dupu7HPqu7HCVc2/G56+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGet7qceaLdyu992smQM88U3bduvWZz+3cpboxfweZ4+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSPr5I2jmVnDFyh5sZS126m7s+70zz8mcedblzL+Fa/uu6r3tm7PvPnv6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZ43lmX12aeOnjqmounO66Y+Y72XVVx7Vk8VbJ4n19WlwD8yj9PAJLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBp41mXM8/KO7Wdu37lfac77juFb+ZJiTOXdSuvfOr9Xjt1Hum1V3AZu8LTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTfA81aX9zvP8JTiNc882/PUBrV4quTT1o+vbcvJU5tMT98ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEkf31+fm1761CbzlFP7t5n3yuf7+3ej6H5/3e/gZ+TpGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BvgeWddznTqBL99p/CtvKOZJ47e7/OdeTdO7Rv3fa9WvEauPVd4+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGeN7qsrglO7VvPGXm/m2ffZ/vvt+77/t8rXjC6szPd8XKNXv6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZ43upy5jl714q7u33XXPwEi0vR4va1eLbnTPuu2dM3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0DSx/fX55FfXFz07VPcku1bis78bszczRbPm53pHfwb9PQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDfC8sy73mXm+37VTO8OZ+8Z976h4BuPMc1BPfUbFV36P3GR6+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSNq4ujy1Fpt5Rt/MHdrTdob32/vd78zJa6e6MZOnb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+ApGNnXd5vWVdc5T1tw7ZyVTM3mSuvfOrz3ffdeB36+z31fj19AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkfXx/ff7xD586o2/flux+JxbO3N2tOHVVM/erM3/22syd8LWZp7N6+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSNq4utznfnu/mfvGazNPd9xn5lawuKu8NnO9PPO74ekbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDp5/12aPvMvOZTq7xTTu0MZ37rTn2Cp1555qdwiqdvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4DnnXVZPClx5nLy1NJs5qmhT7uTM/8WZt6ra6/bnTh6zdM3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0DSsdXlzB3aPqfWcTNXeTN3s8WrOsXd+H1WlwD8hX+eACTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN8DzVpf7dndP22Secr895/3O9py5Mr1WXIquOPV+PX0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyT9XPnhmduq4omFMxdupz7fmXvOlbuxclX3Owlzn/fDVrWevgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BnnfW5dOWVzP3b6d2pNdO7VdPOXXNxQ2qa/6V1SXA4/jnCUCSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAM8b3VZ3PvtW3zNXLhdO/WOnuZ+fwvXit+N98g17zVP3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASRvPuryffVuyU7vK+y0JV8xcIc5cEa+43+99HXpHnr4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZJ+rvxw8US7ayv7qFOrrVMLxpmf/qn924qZu8qZ56Deb7G5wtM3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN8DzzrqcuUQqrrbut42cuRS9NvOqrj3tfM77nfu6wtM3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN8Dzzrp82gLq1DXvW6nd77TD+3naOagzP9/3yB2pp2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgKRjq0t+375lXfG00lP2rRBP3edTu9ni9+o18q/M0zdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJLV5Yjd3anTLK+tXNWpE0eLn9GpTebMkzBPnbFZ5OkbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDp2OqyeN7d/U6z3Gffom/fN+fU2Y/7zNyg3u8+n+LpGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5Bsg6eP76/OPf/h++6hTW9B9d3Jl4VY8dXDf+z11MmTxvMriJ/gO7sA9fQMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDPG91CcApnr4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BfhT9FzfGst1UEOnoAAAAAElFTkSuQmCC" alt="QR Code for Room 9" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad10" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep10" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad10)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 10</span>
+                <h3 class="room-title">Pioneer Kitchen & Domestic Life</h3>
+                <p class="room-sub">Heart of the Southwest Home</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 10" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad11" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep11" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad11)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 11</span>
+                <h3 class="room-title">Main Street Merchant & Barber Shop</h3>
+                <p class="room-sub">Commerce in Early Deming</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 11" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad12" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep12" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad12)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 12</span>
+                <h3 class="room-title">Geode, Mineral & Rockhound Room</h3>
+                <p class="room-sub">Geological Treasures of Luna County</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqCAIAAABED5ptAAAL40lEQVR4nO3dwW0jyxlG0ZGhQBiAU3D0TsEBMA4Bgrx9q8J4+pX/ut3n7EdsNsmLxgAf6uPn++sXADX/mL4AAP6EfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0DS55V//Prnv37dy/s//56+hIypT7/4GV25V+v3u/7L+/7tFfuuuejKffb0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g3wvNVlcR23b7W1b1l35lVdueap3d3Uom/f57vvHRX3nO+HNcfTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0sbV5Vpx4bZvh7ZvpXbmDu1MU/fqzFND73eq5CvYnDVP3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASWOry6fZdzLkldc9c++3z9QZjPted+rU0OKncD+evgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bkqwu/wdXNmz7zqu8cormFfsWfcU14L5rPvOExvudhFnk6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIGlsdXm/E+32bTIt3H7/Xl1x5trzzN9R8ff7Dl7zmqdvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4CkjavL+20F951meYW151/5jE74bkydCvu6XXPWPH0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyR9/Hx/TV8DyZ3hvhMa7/eOile1b8F4vzMnp3j6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZI2njWZXHRd+UvTyle1ZVP4X7nGZ75js78Xu3zCpbB0zdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3wPNWl1fOJNx3nuHUSYnFq7rfkvDMOzl1N85cL095H/nduMLTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0uf9FlBTZ13u26Duu6oriu/ozC3o076Ta2fusV/Lfzt1rzx9AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAM8b3VZPM1yaqNYPOvyzM93n6lrPnNJuHbmYnNt6le273U9fQMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJH38fH9t+tNT27kriicHnnmfz1xdnvkZnXlV+5z5ft9Hns+55ukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDp0NVlcQG1T/EdFU/C3Hcnp1aX9zv588xTNF9WlwD8Pv95ApAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wDPW13u25IV/+2Zi6+1+92rM8/JnDqD8QpXdf7d8PQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZC08azLK4rnGRbXgFf+8tr9lrFnvqMz95xnnnT6HjpTdN999vQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZC08azLMxdQxV3WmXuw4hpw7cxt5NM2t0Wvofvs6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIOlz358urtSedjfu946Ka8+1K1d1v1Mlp97R2tQv1NM3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN8DzVpdTe7Cp3d2Vv7xv7ze1+DpzwXjm+z1zg3q/3/5r23dyatu85ukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDp4+f764//sRMa/657VTyx8AoLxv/P3VibWoreb/14xZW74ekbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkG+B5q8u1qT3Y/RTvRvGa14o7w+Judsp76HTWKzx9AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkff66naml2dqZu7sz//KV171ifc3FEymn9o3FpWiRp2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgOetLosrpn1nEj5tV/m0z3ff6079jqa+sff7fK+4cs2evgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bnre6PHNLtnbm7m5K8RNcO/M+T2329p2Eeb+TTq+YuhuevgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bkj5+vr9GXri46Jty5mmW+1amZ343rnwKxbtxv0Vucc+55ukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBpbHW5z9T+bWq1deWqnrZvnFqonunMpejUJ/g68te95ukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDpc9+fPnMfVTwZ0jby77pXZy4J973u2plLwrX7raav8PQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZC0cXU5Zd++cWr9uG8PVtywnXmW6ZXvxpm7yn33eeq7UfwU1jx9AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkffx8f/3xP77fmZNXXvfMu7HvqqbOBnzayZ9rU5/vmd/YteI1r3n6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZI2njWZXEdtza1rZraN565mz3zqu63YJy6k2c253XketnTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTfA81aXxTPrrjjzms/cg63tW/TtWxLu+wQtgX//bhR/+/t4+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGeN7qcmrDdr+159RWcN+Zk8VzUKc87bcwddLpO3jO7Zqnb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+ApI+f76/cGYz3OyvvzPMqp5Z1xRXiFWde1drT9o1X7HtHnr4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZIOXV1e+cvFTeaUqbtx5uuunbnXLS6fp7yO/F5d4ekbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDpc9+fnloi3e+0w+LC7cyzPc/c3a2v6sxv7P0WqsXfr6dvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4CksbMui8urM/dvxataO3NJeOanUDzN0jX/ldUlwOP4zxOAJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGeN7qct/SbN8ebOqUxftt9vaZ2uuuFe/Gmd/nM72DW19P3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASZ9n7pSKf/lpu8riiYVrV65q385w353cZ2rtubbvXk29I0/fAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wDPW12eufh62iZz31aweNph8R2deTrr1Hdy7czF5nuoG56+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGet7pcm1oirZ15yuL9zkKcuqqpz6i415163TN/g6/ghtzTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0sbV5Vpxd1c87XDqdadOO7yfqfM5p173zM/3PfQLXfP0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QNLa65ISV2tRarGjfCvHMc0GLu+h9zvyVefoGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiyusyfOjj1l9f/durE0X2f0dTr7vv0zzwJc+pXVuTpGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgaWx1WTzvbkpxpbZv0bfvm3O/sx/P3KBO3ef78fQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZD08fP99cf/+H77qDO3oGeesnjlL++z7/TOM08rveLMz3fqE3wf+dtf8/QNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDfC81SUAUzx9AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8A/wq+i9yEYnD8ZAJ2gAAAABJRU5ErkJggg==" alt="QR Code for Room 12" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad13" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep13" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad13)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 13</span>
+                <h3 class="room-title">Pancho Villa Raid & Border History</h3>
+                <p class="room-sub">The 1916 Columbus Raid</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 13" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad14" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep14" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad14)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 14</span>
+                <h3 class="room-title">Deming Fire Department & Early Services</h3>
+                <p class="room-sub">Protecting the Frontier Town</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,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" alt="QR Code for Room 14" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pot-card">
+          <div class="pot-container">
+            <!-- SVG Mimbres Olla Pot Silhouette & Geometric Border -->
+            <svg viewBox="0 0 400 480" class="pot-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="clayGrad15" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fdfbf7" />
+                  <stop offset="70%" stop-color="#f3ece2" />
+                  <stop offset="100%" stop-color="#e2d2be" />
+                </radialGradient>
+                <pattern id="mimbresStep15" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 0 0 L 10 0 L 10 10 L 20 10 L 20 20 L 10 20 L 10 10 L 0 10 Z" fill="#2d241e" opacity="0.15"/>
+                </pattern>
+              </defs>
+
+              <!-- Pot Silhouette Shadow & Body -->
+              <path d="M 140 30 C 135 70, 60 140, 30 250 C 5 360, 100 460, 200 460 C 300 460, 395 360, 370 250 C 340 140, 265 70, 260 30 Z" 
+                    fill="url(#clayGrad15)" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Flared Rim / Neck -->
+              <path d="M 130 30 Q 200 18 270 30 Q 200 42 130 30 Z" fill="#c46231" stroke="#8c4b27" stroke-width="3" />
+
+              <!-- Geometric Mimbres Shoulder Band -->
+              <path d="M 95 125 C 135 110, 265 110, 305 125 C 330 165, 360 230, 360 250 C 330 260, 70 260, 40 250 C 40 230, 70 165, 95 125 Z" 
+                    fill="none" stroke="#2d241e" stroke-width="3" />
+              
+              <!-- Stepped geometric decorative accents -->
+              <polyline points="70,160 100,160 100,190 130,190 130,220 160,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              <polyline points="330,160 300,160 300,190 270,190 270,220 240,220" fill="none" stroke="#8c4b27" stroke-width="4" />
+              
+              <!-- Center Framed Box for QR Code -->
+              <rect x="110" y="190" width="180" height="180" rx="14" fill="#fffdfa" stroke="#2d241e" stroke-width="4" />
+              <rect x="115" y="195" width="170" height="170" rx="10" fill="none" stroke="#c46231" stroke-width="2" stroke-dasharray="6,4" />
+              
+              <!-- Lower Base Stripe -->
+              <path d="M 80 390 Q 200 430 320 390" fill="none" stroke="#2d241e" stroke-width="6" />
+              <path d="M 100 410 Q 200 445 300 410" fill="none" stroke="#8c4b27" stroke-width="4" />
+            </svg>
+
+            <!-- Card Content Overlay -->
+            <div class="pot-content">
+              <div class="pot-header">
+                <span class="room-num">ROOM 15</span>
+                <h3 class="room-title">Custom House & Historic Outbuildings</h3>
+                <p class="room-sub">Border Commerce & Customs</p>
+              </div>
+
+              <div class="pot-qr">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAHqCAIAAABED5ptAAALz0lEQVR4nO3dwW3lxhJA0ZGhQF4ATsHROwUHoDgECPrb7w0BT09P1yXP2b8niqQuGgIK9fb99fkDgJo/Tl8AAD9DvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDpfeXDrz//+nEvH//8ven3XfnmmZ+9tu+qru275pk/95Tiu3G/O+n0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g3wvKnLfdNE++yb2tr3++6bjSxOuJ16r4pzlafu1b439trHw5rj9A2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASfINkLRx6vJ+04/329B47dSezJn7KmdOEs6cjJ3pFWzONadvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4CkY1OXRfumtk5NbK6YORtZ3O54/dl931y8V/w/p2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCRTl7/MzH2VK1xV/c2xJ/PenL4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZKOTV3eb6PdyvzbzOm4fXsUZ+72nHlVMxV/34/gNV9z+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSHp/2qbE4oziin2zkTNnMvfd55n3ap/i7/t6WHOcvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bnjd1eb/dcddOzQrus+/nntre6Z28931+2vO95vQNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZC0cdflilPb8PbNdM3cHFi8GzP3GZ6aBly5G/d7r17BKeKVu+H0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2Q9Pb99bnpq/dNbV3bN5NZ3P34tK2D7uTvuZMzn/7MWe5rpi4BHsc/TwCS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BvgeVOXxT17K1d1SnEWtLiPtLjd8ZSZf2WvQ9PLp94Np2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgKT3U7NGM+ejirvyrs2c99v3+86cfpw5N7vvbsz8W7jf35HTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTfA83ZdFvcKPm2m62n7Gz3fX2Xmu1Gc1t7H6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQb4HlTlzN3Pz5tz97MObTi9s6Zk4TF/Zw2yv6e5+v0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g2QtHHqkgmbA2c+o5kTucUdqsWNlDPndV/BOWGnb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+ApPcfI53alTdzou/azInNU3fj1GbImdOeM+cM77dF85pdlwD8i3+eACTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0DSxqnLmVNMxZ2E95tvPDUbuXKfT3125p3c9/T33eePkXtBVzh9AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkvX1/fW766uIE1MyNlDPnwWb+RvfbdDpzTvh++1dXnPoLdfoGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkjauOtyn1NzaPvMnBXc99mZM2wzv3nm099n5sT1zN/I6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIGno1GVxHuza0/b7XZu53fHavqu6317Q4vP9GNmca07fAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJb99fn0d+8MzJq+Ls3MzJuhX3ezeKE7lPewrXZv6lOH0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8Azxv6vLUFr5rxQnGa6f2Gd7vm/f93PvdjX1mPt9TVn5fp2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgKT3Uz/41ARUcTpu5ZtPTeXNnKybeTf2fbPJ59/j1NZQp2+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgKRjU5en5pT2zd3t24U4817N3LJ46qrut6Hx1FtXfL6vQ7O+Tt8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAM+butw3l7XyzafmwfZZmemaeTdWrmrmltQVp2Zu7/duPI3TN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0tv31+dPf3jfXOXKzy1uHZy5N/J+U6b73rqiU1PT1049wY+RG2WvOX0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyRt3HV5yqlpsftd8/3mDFfm7p42o3ht5vzqa9vmz1OzvtecvgGS5BsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4Bkjbuupw5pXatODt3ajbyfs9332TdzPdq5efOfGM/gnPgdl0CPI5/ngAkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdA0sapyxUzJ81OKe6cnDmzN3NjYfH5XrMz9vdw+gZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSHpf+fD9ZqtmTgOuKF7zzD2Kp2YyT72xMyefTz2Fa6euyukbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkG+B5U5enZqv2ffPMXZenJvpW7JsGnDkZO3OCcebb/rS52de2n+v0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g3wvKnLfYqzc/sm607Ng12bud1x5rtxaibz1FWdmqtccepurHD6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIevv++tz01TO3/z1tT+bMqcv7TZmemiQ8NSm6YuZWydfIHarXnL4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZ43dTlz0oz6psT7zWSumLm989rMbZYfwWd0zekbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIEm+AZLkGyDpvTj9WNxK97RrfpriZsiZ7/O+v4VX8JqvOX0DJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8Azxv1+X9NmHOnK26VryqFcU9iqdmMmdus3TNv4rTN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTfA83Zdzpzp2vfNp3ZO3m+D38zJyVNO/aXM3KG677P34/QNkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEnyDZC0cdfl/Zza77di37TnzFnQFaZqf9XdWDHz+V479T47fQMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJG3cdVl0PQG1Mls1c5Lw1EzmPvt+31OTdcXPntp1WZwxXuH0DZAk3wBJ8g2QJN8ASfINkCTfAEnyDZAk3wBJ8g3wvKnLazMn+oob/Gbu2Jz5fGde1cwnuPJzr828qlO/r12XAPyLf54AJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QNLb99fnT394ZZro1FzWzJ2TT3Pq3Zg5lXdqMvbUzO39nu8pTt8ASfINkCTfAEnyDZAk3wBJ8g2QJN8ASfINkCTfAEkbd13ez8rsXHGm69RU3sx7dWr6ceb08v28Ds1jr3D6BkiSb4Ak+QZIkm+AJPkGSJJvgCT5BkiSb4Ak+QZIMnWZ3xy44tTWweLG0ac9oxUzZ0Ff26ZbT+3XdfoGSJJvgCT5BkiSb4Ak+QZIkm+AJPkGSJJvgCT5Bkg6NnU5c3fcPqcmCfdt4Dy1+3GmU3Ok97uTp+5VcXer0zdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QNLGqcvixNdMK3dy5lbJmTNs+5yaUC1O1c7sxsehp3DN6RsgSb4BkuQbIEm+AZLkGyBJvgGS5BsgSb4BkuQbIOnt++vz9DUA8J85fQMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAMkyTdAknwDJMk3QJJ8AyTJN0CSfAP8KPofAFCGqlhwcfAAAAAASUVORK5CYII=" alt="QR Code for Room 15" />
+              </div>
+
+              <div class="pot-footer">
+                <div class="scan-cta">🎧 Scan with Camera for Audio Tour</div>
+                <div class="museum-tag">Deming Luna Mimbres Museum • Free Audio Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+
+</body>
+</html>
