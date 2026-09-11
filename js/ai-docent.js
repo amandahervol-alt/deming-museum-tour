@@ -97,6 +97,10 @@ async function generateAIDocentResponse(query) {
   }
 
   // Smart Local Fallback Knowledge Engine (RAG match)
+  if (lowerQuery.includes('old timer') || lowerQuery.includes('measday') || lowerQuery.includes('mahoney') || lowerQuery.includes('water stop') || lowerQuery.includes('60 mile') || lowerQuery.includes('harvey house') || lowerQuery.includes('herman perez') || lowerQuery.includes('1918 fire') || lowerQuery.includes('sanitarium')) {
+    return "In Room 1 (Old Timers' Room), explore photographs dating back to Deming's 1881 founding! Deming was the natural 60-mile steam locomotive water stop between Las Cruces, Lordsburg, and Silver City. The photo collection started around 1900 in Mahoney's Hardware Store windows, displayed on wrought-iron racks built by Harold Measday. The Old Timers' annual October reunion is New Mexico's longest continuously running celebration!";
+  }
+
   if (lowerQuery.includes('kill hole') || lowerQuery.includes('hole') || lowerQuery.includes('mimbres') || lowerQuery.includes('pottery') || lowerQuery.includes('bowl')) {
     return "The Mimbres people (A.D. 1000–1130) are famous for their black-on-white painted ceramic bowls. The small hole punched in the center is called a 'kill hole'—a ceremonial puncture created before burial to release the vessel's spirit!";
   }

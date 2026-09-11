@@ -36,6 +36,23 @@
     "military_and_bataan": {
       "significance": "Honors local service members, particularly the 200th Coast Artillery (AA) during WWII who endured the Bataan Death March in the Philippines."
     },
+    "old_timers_room": {
+      "founding_year": 1881,
+      "railroad_water_stop": "Deming was founded in 1881 where Santa Fe and Southern Pacific tracks met to drive the silver spike (second transcontinental railroad). Locomotives could only travel ~60 miles between water refills; Deming sits almost exactly 60 miles from Las Cruces, Lordsburg, and Silver City, making it the perfect natural water stop.",
+      "old_timers_tradition": "Started around 1900 by local businessmen known as 'The Old Timers'. Annual October reunions, banquet, and dance constitute the longest continuously running celebration in New Mexico (113+ years of association presidents).",
+      "photo_displays": "Originally displayed in Mahoney's Hardware Store windows; now housed in wrought-iron photo racks built in the early 1980s by Harold Measday.",
+      "featured_photos": [
+        "Deming Harvey House",
+        "Holy Cross Sanitarium",
+        "Great fire of July 11, 1918",
+        "Deming High School class of 1932 yearbook",
+        "Dr. Paul Feil and wife Alma",
+        "1918 diploma of Frances Isabel Phillips",
+        "1902 Horse & Buggy Days photo",
+        "Portrait of Herman Perez, age 112 in 1928",
+        "1898 artist rendition looking south down Gold Street toward the railroad station"
+      ]
+    },
     "pancho_villa_raid": {
       "date": "March 9, 1916",
       "location": "Columbus, NM (30 miles south of Deming)",
