@@ -100,6 +100,13 @@
       "date": "March 9, 1916",
       "location": "Columbus, NM (30 miles south of Deming)",
       "general": "General John J. Pershing led the Punitive Expedition out of Camp Furlong into Mexico."
+    },
+    "main_street": {
+      "storefronts": "Recreated vintage Deming Main Street with Mahoney Hardware, barber shop, dental clinic, millinery/dress shop, post office, beauty salon, livery stable, and funeral parlor.",
+      "hearse_and_vehicles": "Horse-drawn hearse from Baca Funeral Home (last used in the 1890s/1900s), courting buggies, snow sleigh, farm wagons.",
+      "mahoney_hardware": "Features the historic washing machine donation that originally sparked the founding of the museum.",
+      "deming_headlight": "Oldest continuously published newspaper in New Mexico; original heavy antique printing press and vintage office equipment on display.",
+      "narrator": "Kirk Hunter"
     }
   },
   "local_deming_info": {
