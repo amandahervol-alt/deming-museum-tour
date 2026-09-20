@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 10 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 10 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 10 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D10" alt="Room 10 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=10</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=10" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 10 of 15</div>
+      <h1 class="room-title">Quilt & Lace Room</h1>
+      <p class="room-subtitle">Hand-Stitched Heritage, 1820s Spreads & Lottie Deno Lace</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 10" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 1:27</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">17th-Century Quilting Traditions & Quilting Bees</span><span class="badge">Circa 1820 Hand-Woven Spread (Bessie Gomer May Memorial)</span><span class="badge">Intricate Tatting Lace Knots & Loops</span><span class="badge">Lottie 'Deno' Thurman Handcrafted Altar Cloth</span><span class="badge">Inspiration for Miss Kitty of TV's Gunsmoke</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">1:27</span>
+      </div>
+      <p class="script-text">European settlers — the Dutch and English among them — brought the tradition of quilting to America in the 17th century. Early quilts were practical creations, often pieced together from fabric scraps and recycled clothing. Over time, quilting bees became cherished social gatherings, giving women a chance to work side by side, trade stories, and strengthen the bonds of their community. The oldest quilt in this room is a hand-woven spread dating to around 1820, donated in memory of Bessie Gomer May, the woman largely responsible for this museum's existence. Look closely and you'll also find fine examples of tatting lace, made from an intricate series of knots and loops. One piece of particular interest is an altar cloth made by Lottie 'Deno' Thurman — known formally as Mrs. Frank Thurman. Lottie led a colorful life in Deming and was renowned as a remarkably shrewd gambler; her reputation was so notable that she's said to have inspired the character of Miss Kitty on the television series Gunsmoke. Several books on Lottie Deno's life are available online, or ask about them in our Gift Store.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=10
+    </div>
+  </div>
+
 </body>
 </html>

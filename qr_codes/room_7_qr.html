@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 7 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 7 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 7 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D7" alt="Room 7 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=7</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=7" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 7 of 15</div>
+      <h1 class="room-title">Transportation Annex</h1>
+      <p class="room-subtitle">Harvey House, 1904 REO, Fire Truck & Railroad History</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 7" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 1:59</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">1881 Silver Spike & Mary Deming-Crocker</span><span class="badge">Historic Harvey House & Harvey Girls Display</span><span class="badge">Original Deming Train Station Sign & Railroad Gear</span><span class="badge">Deming's First Volunteer Fire Truck with Working Bell & Siren</span><span class="badge">1904 REO Automobile & Historic Soap Box Derby Racers</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">1:59</span>
+      </div>
+      <p class="script-text">Transportation has shaped life in Deming and throughout the Southwest for generations. From wagons and railroads to automobiles and modern highways, each advancement changed how people traveled, worked, traded, and stayed connected. On March 18, 1881, the Santa Fe and Southern Pacific Railroad met to create the southern transcontinental railroad line, joining east and west with a silver spike. Charles Crocker was one of the four railroad barons, and Deming was named after his wife, Mary Deming-Crocker. Deming boasted one of the grandest Harvey Houses in the Southwest—America's first restaurant chain—where single young women of good character, known as Harvey Girls, served gourmet meals on silver and fine china. Our exhibit preserves original lumber and paint from Deming's historic Harvey House, donated by Santa Fe employees. You'll also see the original sign from Deming's historic train station, Deming's first volunteer fire truck (go ahead and ring the bell or turn the siren handle!), the 1904 REO—the very first automobile owned by a Deming resident—and two classic soap box derby cars raced in El Paso.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=7
+    </div>
+  </div>
+
 </body>
 </html>

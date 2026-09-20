@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 12 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 12 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 12 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D12" alt="Room 12 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=12</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=12" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 12 of 15</div>
+      <h1 class="room-title">Geodes Display</h1>
+      <p class="room-subtitle">The Geode Kid Collection, Thundereggs & Agates</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 12" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 2:40</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">The Geode Kid Mineral & Fossil Collection</span><span class="badge">Hollow Sparkling Crystal Geodes</span><span class="badge">Luna County & Mimbres Valley Thundereggs</span><span class="badge">Rockhound State Park Legal Collecting Area</span><span class="badge">Polished Chalcedony, Agate, Jasper & Opal</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">2:40</span>
+      </div>
+      <p class="script-text">Welcome to the Geode Room! The Geode Kid Collection brings together geodes, thundereggs, petrified wood, fossils, and other minerals from across the region—many collected right here in Luna County and the surrounding Mimbres Valley area. A geode is a spherical rock formed inside sedimentary or volcanic stone, hiding a hollow chamber lined with sparkling crystals. Those crystals grow when mineral-rich water seeps into small cavities, called vesicles, within volcanic rock and slowly fills them in over millennia. Nearby Rockhound State Park, just southeast of Deming, is one of the rare state parks in the country where visitors are welcome to take home what they find! Rockhounds regularly discover agates and thundereggs: nodules formed in rhyolitic volcanic ash beds. Slice and polish a thunderegg, and you will find centers of chalcedony with bands of agate, jasper, or opal, alongside quartz and gypsum crystals. While a geode is defined by its hollow crystal center, a thunderegg is a unique solid or crystal-filled nodule—and nature has created countless masterpieces right beneath Luna County's soil.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=12
+    </div>
+  </div>
+
 </body>
 </html>

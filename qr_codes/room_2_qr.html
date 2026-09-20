@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 2 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 2 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 2 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D2" alt="Room 2 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=2</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=2" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 2 of 15</div>
+      <h1 class="room-title">Mimbres Pottery & Prehistoric Culture</h1>
+      <p class="room-subtitle">Masterpieces of 950–1200 A.D. & Mogollon Heritage</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 2" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 2:30</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">950–1200 A.D. Mimbres Mogollon Culture</span><span class="badge">World-Famous Black-on-White Painted Bowls</span><span class="badge">Ceremonial 'Kill Hole' Spirit Rituals</span><span class="badge">Chewed Yucca Leaf & Mineral Pigment Artistry</span><span class="badge">Historic Transcontinental Lowland Route</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">2:30</span>
+      </div>
+      <p class="script-text">About 5,000 Mimbres Indians lived along the Mimbres River and occupied the Deming, Silver City, and Lordsburg area—spanning Luna, Grant, and Hidalgo counties—from 950 to 1200 A.D. Fortunately, they buried pottery with their deceased under the floors of their homes. From archaeological excavations, we know the Mimbres were a deeply religious, agricultural people. Their painted pots depict wedding ceremonies, christenings, babies carried on cradleboards, children playing, and grandfathers telling stories. One famous bowl shows an elder with a cane and a hand on his back. Their pottery gives us extraordinary insight into their dress, hairstyles, weapons, ceremonial dancing, bird-snaring, and daily life. The circular hole in the center of burial pottery was ceremonial—known as 'killing' the pot to release the spirit of the vessel—often placed over the head of the deceased. Painted using chewed yucca leaf brushes and natural earth mineral pigments, Mimbres black-on-white and red-on-white pottery is internationally renowned. As archaeologist J.W. Fewkes observed, 'no Southwestern pottery, ancient or modern, surpasses that of the Mimbres.' Geographically, the Mimbres homeland was the only low-land route from the Atlantic to the Pacific without mountain navigation—the exact geographic reason why the southern transcontinental railroad and Interstate 10 were built right through Deming.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=2
+    </div>
+  </div>
+
 </body>
 </html>

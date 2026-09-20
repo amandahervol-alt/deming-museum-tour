@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 13 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 13 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 13 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D13" alt="Room 13 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=13</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=13" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 13 of 15</div>
+      <h1 class="room-title">Pancho Villa Raid & Border History</h1>
+      <p class="room-subtitle">The 1916 Columbus Raid</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 13" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 2:20</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">March 9, 1916 Raid Artifacts</span><span class="badge">General Pershing Expedition Gear</span><span class="badge">Camp Furlong Relics & Photos</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">2:20</span>
+      </div>
+      <p class="script-text">On March 9, 1916, Mexican revolutionary General Francisco 'Pancho' Villa launched a surprise raid on the town of Columbus, NM, just 30 miles south of Deming. In response, President Woodrow Wilson dispatched General John J. 'Black Jack' Pershing on the Punitive Expedition into Mexico. This room houses weapons, photographs, military dispatches, and artifacts from Camp Furlong and the border conflict.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=13
+    </div>
+  </div>
+
 </body>
 </html>

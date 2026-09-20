@@ -103,6 +103,7 @@ function setupEventListeners() {
 // Audio Playback Handler
 let playInterval = null;
 let playTimeSeconds = 0;
+let usingSpeechFallback = false;
 
 function toggleAudio() {
   if (isPlaying) {
@@ -113,39 +114,63 @@ function toggleAudio() {
 }
 
 function playAudio() {
+  const room = roomsData.find((r) => r.id === currentRoomId);
+  if (!room) return;
+
   isPlaying = true;
   updatePlayPauseIcon();
 
-  // Try real HTML5 audio or synthesize speech demo
-  const room = roomsData.find((r) => r.id === currentRoomId);
   if (!audioInstance) {
     audioInstance = new Audio(room.audio);
+    
+    audioInstance.addEventListener('loadedmetadata', () => {
+      if (audioInstance.duration && !isNaN(audioInstance.duration)) {
+        document.getElementById('totalTimeDisplay').textContent = formatSeconds(audioInstance.duration);
+      }
+    });
+
+    audioInstance.addEventListener('timeupdate', () => {
+      if (audioInstance && audioInstance.duration) {
+        const cur = audioInstance.currentTime;
+        const dur = audioInstance.duration;
+        const pct = Math.min((cur / dur) * 100, 100);
+        document.getElementById('progressBarFill').style.width = `${pct}%`;
+        document.getElementById('currentTimeDisplay').textContent = formatSeconds(cur);
+      }
+    });
+
     audioInstance.addEventListener('ended', onAudioEnded);
   }
 
-  audioInstance.play().catch(() => {
-    // Fallback speech synthesis demo if MP3 file doesn't exist yet
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(room.transcript);
-      utterance.rate = 0.95;
-      utterance.onend = onAudioEnded;
-      window.speechSynthesis.speak(utterance);
-    }
-  });
+  usingSpeechFallback = false;
+  const playPromise = audioInstance.play();
 
-  // Simulated progress timer
-  if (playInterval) clearInterval(playInterval);
-  playInterval = setInterval(() => {
-    playTimeSeconds += 1;
-    const totalSecs = 115; // default 1:55
-    const pct = Math.min((playTimeSeconds / totalSecs) * 100, 100);
-    document.getElementById('progressBarFill').style.width = `${pct}%`;
-    document.getElementById('currentTimeDisplay').textContent = formatSeconds(playTimeSeconds);
-    if (pct >= 100) {
-      onAudioEnded();
-    }
-  }, 1000);
+  if (playPromise !== undefined) {
+    playPromise.catch((err) => {
+      console.log('Falling back to Web Speech Synthesis:', err);
+      usingSpeechFallback = true;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(room.transcript);
+        utterance.rate = 0.95;
+        utterance.onend = onAudioEnded;
+        window.speechSynthesis.speak(utterance);
+      }
+
+      // Simulated progress timer for speech fallback
+      if (playInterval) clearInterval(playInterval);
+      playInterval = setInterval(() => {
+        playTimeSeconds += 1;
+        const totalSecs = 115;
+        const pct = Math.min((playTimeSeconds / totalSecs) * 100, 100);
+        document.getElementById('progressBarFill').style.width = `${pct}%`;
+        document.getElementById('currentTimeDisplay').textContent = formatSeconds(playTimeSeconds);
+        if (pct >= 100) {
+          onAudioEnded();
+        }
+      }, 1000);
+    });
+  }
 }
 
 function pauseAudio() {
@@ -160,6 +185,7 @@ function stopAudio() {
   pauseAudio();
   playTimeSeconds = 0;
   if (audioInstance) {
+    audioInstance.pause();
     audioInstance.currentTime = 0;
     audioInstance = null;
   }
@@ -191,3 +217,4 @@ function formatSeconds(secs) {
   const s = Math.floor(secs % 60);
   return `${m}:${s < 10 ? '0' : ''}${s}`;
 }
+

@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 6 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 6 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 6 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D6" alt="Room 6 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=6</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=6" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 6 of 15</div>
+      <h1 class="room-title">Doll & Toy Room</h1>
+      <p class="room-subtitle">Auburn Rubber, Historic Dolls & Childhood Memories</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 6" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 1:20</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">Auburn Rubber Toys (Deming 1959–1960)</span><span class="badge">1916 Pancho Villa Raid Survivor Doll</span><span class="badge">Hiroshima Japanese Doll Artifact</span><span class="badge">Armory Shooting Range & WWII USO Bowling Alley</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">1:20</span>
+      </div>
+      <p class="script-text">The doll and toy room is unique as we have toys made from the pioneers settling in Luna County and from Auburn Rubber—the largest producer of rubber and vinyl toys in America and probably the world. They moved their molds from Auburn, Indiana to Deming in the 1959–1960 timeframe. We have a doll from the Pancho Villa Raid of March 9, 1916. The doll belonged to the daughter of the telephone operator who called in the raid. Glass shards rained on the daughter's head as bullets broke the window above the area where she was sleeping. We also have a Japanese doll from the ashes of Hiroshima. The hair is real from a Japanese woman; an American soldier picked the doll from a pile of rubbish and later donated it to our museum. A walk through this room will bring back childhood memories of toys you may have likely played with as a child. This room and the adjoining Old Timers' Room you just walked through were originally a small-caliber indoor shooting range used by the soldiers stationed here. During World War II, when this building served as a USO, these two rooms were converted to a bowling alley.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=6
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1,22 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Room 4 QR Code - Deming Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 4 Exhibit Placard & Narration Script - Deming Museum</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; background: #FAF6F0; }
-    .card { background: white; padding: 30px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #8C2D19; }
-    h2 { color: #8C2D19; margin-bottom: 5px; }
-    p { color: #666; font-size: 14px; margin-bottom: 20px; }
-    img { width: 250px; height: 250px; }
-    .url { margin-top: 15px; font-family: monospace; font-size: 12px; color: #444; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      background: #f4ede4;
+      color: #2c221e;
+      padding: 30px 16px;
+      line-height: 1.5;
+    }
+    .print-bar {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      background: #8c2d19;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(140, 45, 25, 0.25);
+    }
+    .btn-print:hover { background: #702111; }
+    .placard-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffdf9;
+      border: 3px solid #8c2d19;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(70, 35, 15, 0.12);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px dashed #d9c5b2;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .museum-name {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .room-badge {
+      display: inline-block;
+      background: #8c2d19;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .room-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2c221e;
+      margin-bottom: 4px;
+    }
+    .room-subtitle {
+      font-size: 15px;
+      color: #7a5c48;
+      font-style: italic;
+    }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .qr-box {
+      background: white;
+      padding: 14px;
+      border: 2px solid #8c2d19;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(140, 45, 25, 0.1);
+      margin-bottom: 12px;
+    }
+    .qr-box img {
+      width: 180px;
+      height: 180px;
+      display: block;
+    }
+    .scan-guide {
+      font-size: 14px;
+      font-weight: 700;
+      color: #8c2d19;
+      margin-bottom: 4px;
+    }
+    .narrator-tag {
+      font-size: 12px;
+      color: #634b3c;
+      background: #f1e4d6;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .highlights-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 14px 0 20px;
+    }
+    .badge {
+      background: #f3ece4;
+      color: #593e2f;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #dfd1c3;
+    }
+    .script-section {
+      background: #faf4ed;
+      border-radius: 12px;
+      padding: 20px 24px;
+      border-left: 4px solid #8c2d19;
+    }
+    .script-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8c2d19;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .script-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #3b2c24;
+      text-align: justify;
+    }
+    .url-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 11px;
+      font-family: monospace;
+      color: #8c7664;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-bar { display: none; }
+      .placard-card { box-shadow: none; border: 2px solid #8c2d19; max-width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Deming Luna Mimbres Museum</h2>
-    <p>Scan to hear Room 4 Audio Speech & Guide</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=8C2D19&data=https%3A//username.github.io/deming-museum-tour/%3Froom%3D4" alt="Room 4 QR Code" />
-    <div class="url">https://username.github.io/deming-museum-tour/?room=4</div>
+
+  <div class="print-bar">
+    <a href="https://amandahervol-alt.github.io/deming-museum-tour/?room=4" target="_blank" style="color:#8c2d19; text-decoration:none; font-weight:600;">← Open Interactive Tour Page</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print Exhibit Placard</button>
   </div>
+
+  <div class="placard-card">
+    <header class="header">
+      <div class="museum-name">Deming Luna Mimbres Museum</div>
+      <div class="room-badge">Room 4 of 15</div>
+      <h1 class="room-title">Military Room</h1>
+      <p class="room-subtitle">Honoring Service, Bataan, WWII Airfield & Frontier Forts</p>
+    </header>
+
+    <div class="qr-section">
+      <div class="qr-box">
+        <img src="data:image/png;base64,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" alt="QR Code for Room 4" />
+      </div>
+      <div class="scan-guide">📱 Point Smartphone Camera to Listen</div>
+      <div class="narrator-tag">🎙️ Interactive Audio Tour • Duration: 4:00</div>
+    </div>
+
+    <div class="highlights-row">
+      <span class="badge">200th & 515th Coast Artillery Bataan Tribute</span><span class="badge">Deming Army Airfield Norden Bombsight & B-17s</span><span class="badge">Fort Cummings & Buffalo Soldiers (9th/10th Cavalry)</span><span class="badge">Camp Cody WWI Camp & Holy Cross Sanitarium</span><span class="badge">March 9, 1916 Columbus Raid Defense Machine Gun</span>
+    </div>
+
+    <div class="script-section">
+      <div class="script-heading">
+        <span>📖 Audio Speech Narration Script</span>
+        <span style="font-weight:600; font-size:11px; color:#7a5c48;">4:00</span>
+      </div>
+      <p class="script-text">Welcome to the Military Room. Along the left wall are photographs of Luna County residents who served in the various branches of our Armed Forces, and the cabinets around you hold insignia, uniforms, mementos, and challenge coins donated and loaned by local families. Look for the faded black-and-white photo of the 200th and 515th Coast Artillery—the New Mexico servicemen who would later take part in the Bataan Death March. A full exhibit on the march is located near the museum's entrance. In the World War II section, you'll find uniforms, insignia, and mementos donated by veterans and their families, along with scale models of ships and planes. At the center of the room, a plexiglass case holds a Norden Mark XV Bombsight—the same model tested in B-17 bombers that trained right here at the Deming Army Airfield, where nearly 8,000 bombardiers were trained by the end of the war. Next, explore displays devoted to Fort Cummings, the first walled fort in New Mexico Territory (1863–1873) and home to the 9th and 10th Cavalry 'Buffalo Soldiers'. Learn about Camp Cody, Deming's massive WWI training camp named after Buffalo Bill Cody, which later became a tuberculosis sanitarium. Finally, view artifacts from the March 9, 1916 Pancho Villa Raid on Columbus, NM, including the historic machine gun that defended the town and General John J. Pershing's Punitive Expedition gear.</p>
+    </div>
+
+    <div class="url-footer">
+      Direct Link: https://amandahervol-alt.github.io/deming-museum-tour/?room=4
+    </div>
+  </div>
+
 </body>
 </html>

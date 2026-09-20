@@ -12,29 +12,65 @@
   },
   "key_collections": {
     "mimbres_pottery": {
-      "era": "A.D. 1000 to 1130",
-      "culture": "Mimbres branch of the Mogollon culture",
-      "significance": "World-famous black-on-white painted ceramic bowls depicting realistic wildlife, geometric art, and human figures.",
-      "kill_hole": "Ceremonial small hole punctured in the center of bowls prior to burial to release the vessel's spirit."
+      "era": "950 to 1200 A.D.",
+      "culture": "Mimbres branch of the Mogollon culture (~5,000 people along Mimbres River in Luna, Grant, and Hidalgo counties)",
+      "significance": "World-famous black-on-white and red-on-white painted ceramic bowls depicting realistic wildlife, weddings, ceremonies, grandfathers telling stories, and daily life.",
+      "tools_materials": "Painted with chewed yucca leaf brushes using natural mineral earth pigments.",
+      "kill_hole": "Ceremonial puncture in the center of burial pottery to release the vessel's spirit, often placed over the head of the deceased.",
+      "geography": "Mimbres valley was the only natural low-land route from Atlantic to Pacific without mountains, why the transcontinental railroad and I-10 pass through Deming.",
+      "narrator": "Kirk Hunter"
     },
     "quilt_collection": {
       "size": "One of the largest hand-stitched quilt displays in the American Southwest.",
       "eras": "Mid-1800s to 1950s",
-      "popular_styles": "Crazy Quilts, Log Cabin, Wedding Ring, feedsack fabrics."
+      "popular_styles": "Crazy Quilts, Log Cabin, Wedding Ring, feedsack fabrics, tatting lace.",
+      "oldest_quilt": "Hand-woven spread circa 1820 donated in memory of Bessie Gomer May, key founder of the museum.",
+      "lottie_deno_thurman": "Intricate tatting lace altar cloth handcrafted by Mrs. Frank Thurman (Lottie Deno), famous frontier gambler who inspired Miss Kitty in Gunsmoke.",
+      "narrator": "Elise Hart"
     },
     "dolls_and_toys": {
-      "highlights": "Hundreds of antique Victorian bisque, porcelain, china head, and composition dolls, plus miniature cast-iron toys and dollhouses."
+      "auburn_rubber": "Auburn Rubber Company, the largest producer of rubber and vinyl toys in America/world, moved molds from Auburn, Indiana to Deming in 1959–1960.",
+      "pancho_villa_doll": "Doll belonging to the daughter of the telephone operator who called in the March 9, 1916 Columbus raid; survived bullets breaking the window above her bed.",
+      "hiroshima_doll": "Japanese doll with real hair recovered from the ashes of Hiroshima by an American soldier and donated to the museum.",
+      "room_history": "Originally a small-caliber indoor shooting range for National Guard soldiers, converted to a USO bowling alley during World War II alongside the adjoining Old Timers' Room.",
+      "narrator": "Kirk Hunter"
     },
-    "railroad_history": {
-      "event": "Joining of Southern Pacific and Santa Fe railroads on March 8, 1881, forming America's 2nd transcontinental railroad connection.",
-      "namer": "Deming was named after Mary Ann Deming, wife of railroad tycoon Charles Crocker."
+    "transportation_annex": {
+      "railroad": "Meeting of Santa Fe and Southern Pacific on March 18, 1881, driving the silver spike for the 2nd transcontinental railroad; Deming named for Mary Deming-Crocker.",
+      "harvey_house": "One of the grandest Harvey Houses in the Southwest; America's first restaurant chain; staffed by Harvey Girls; original lumber and paint preserved.",
+      "train_station": "Original Deming train station sign on display; historic station building relocated to North Country Club Road.",
+      "vehicles": "Deming's first fire truck with interactive bell and siren, the 1904 REO (first car owned in Deming), and historic El Paso soap box derby racers.",
+      "narrator": "Kirk Hunter"
     },
     "geodes_and_minerals": {
-      "highlights": "Extensive collection of local thunder eggs, agates, geodes, quartz, and a darkroom display of UV-fluorescent minerals.",
-      "local_park": "Rockhound State Park, located 12 miles southeast of Deming, where visitors can collect up to 15 pounds of rocks to keep."
+      "collection": "The Geode Kid Collection of geodes, thundereggs, petrified wood, fossils, and minerals from Luna County & Mimbres Valley.",
+      "geodes_vs_thundereggs": "Geodes are hollow chambers lined with sparkling crystals (formed when mineral-rich water fills vesicles); thundereggs are spherical nodules formed in rhyolitic volcanic ash with centers of chalcedony, agate, jasper, and opal.",
+      "rockhound_state_park": "Located southeast of Deming; one of the rare state parks in the US where visitors are legally permitted to collect and keep agates, thundereggs, and minerals.",
+      "narrator": "Kirk Hunter"
     },
-    "military_and_bataan": {
-      "significance": "Honors local service members, particularly the 200th Coast Artillery (AA) during WWII who endured the Bataan Death March in the Philippines."
+    "bataan_death_march": {
+      "regiments": "200th & 515th Coast Artillery Anti-Aircraft Corps",
+      "history": "April 9–17, 1942: ~75,000 American and Filipino POWs forced on 65-mile march from Mariveles to Camp O'Donnell under extreme brutality.",
+      "casualties": "Out of 1,816 men in the NM 200th & 515th units, 829 died in battle, in captivity, or post-liberation; 987 survived.",
+      "local_veterans": "83 Luna County residents listed on museum plaque, with 30 killed in action; Lee Gardner family shadowbox on display.",
+      "memorial_march": "Annual 26.2-mile Bataan Memorial Death March held each spring at White Sands Missile Range since 1989.",
+      "narrator": "Kirk Hunter"
+    },
+    "western_area": {
+      "ranching_hub": "Deming transitioned from a railroad junction into a major agriculture and cattle ranching center.",
+      "diamond_a_chuckwagon": "Authentic chuckwagon from the Diamond A Ranch in Hachita, NM, crafted from multiple wagons; last used on a drive in 1972.",
+      "chuckwagon_supplies": "Loaded with cast-iron pans, Dutch ovens, water barrels, branding irons, flour, cornmeal, pinto beans, green coffee beans, salt pork, beef jerky, bacon.",
+      "ruebush_saddlery": "Historic Saddlery on Silver Street (1930s–1970s) where local ranching saddles were custom made.",
+      "cowboy_hats": "Hats donated by local ranchers where unique brim creases, tilts, and shapes served as distant visual IDs on the open range.",
+      "narrator": "Kirk Hunter"
+    },
+    "medical_room": {
+      "era": "1930s to 1950s healthcare in Luna County & Southwest New Mexico",
+      "iron_lungs": "Adult and child iron lungs donated by the former Deming Memorial Hospital, used during the 1949 and 1952 polio epidemics.",
+      "birthing_chair": "Antique wooden birthing chair imported from Spain.",
+      "hospitals_represented": "Deming Memorial Hospital, Ladies Hospital, Faywood Hot Springs, Camp Cody Red Cross Building & Infirmary, and Holy Cross Hospital (tuberculosis sanitarium).",
+      "holy_cross_sanitarium": "Nun doll and historical research paper donated by the Holy Cross Order of South Bend, Indiana, documenting their establishment of the sanitarium in Deming.",
+      "narrator": "Kirk Hunter"
     },
     "old_timers_room": {
       "founding_year": 1881,
@@ -52,6 +88,13 @@
         "Portrait of Herman Perez, age 112 in 1928",
         "1898 artist rendition looking south down Gold Street toward the railroad station"
       ]
+    },
+    "main_room": {
+      "building": "1916 National Guard Armory",
+      "status": "National Register of Historic Places",
+      "architecture": "Exposed timber roof trusses, soaring ceilings, red-brick construction.",
+      "narrator": "Kirk Hunter",
+      "history": "Built in 1916 for the New Mexico National Guard Company I during Southwestern border tensions; later repurposed as community center and historical museum."
     },
     "pancho_villa_raid": {
       "date": "March 9, 1916",
