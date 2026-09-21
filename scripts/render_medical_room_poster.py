@@ -1,21 +1,16 @@
-#!/usr/bin/env python3
 import os
+import shutil
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import qrcode
-import shutil
 
-BASE_URL = "https://amandahervol-alt.github.io/deming-museum-tour"
+# 1. Configuration
 ROOM_ID = 8
-TARGET_URL = f"{BASE_URL}/?room={ROOM_ID}"
+TARGET_URL = f"https://amandahervol-alt.github.io/deming-museum-tour/?room={ROOM_ID}"
 
-# 1. Base template
-template_path = r"C:\Users\manet\.gemini\antigravity-ide\brain\6f34c999-2401-441a-aae3-0a0320e6d5be\.user_uploaded\media_1789575966257.jpg"
-if not os.path.exists(template_path):
-    # Fallback to local copy
-    template_path = "qr_codes/western_area_poster_placard.jpg"
-
+# 2. Template
+template_path = r"C:\Users\manet\.gemini\antigravity-ide\brain\6f34c999-2401-441a-aae3-0a0320e6d5be\.user_uploaded\media_1789917482175.jpg"
 cv_img = cv2.imread(template_path)
 H, W, _ = cv_img.shape
 
@@ -27,8 +22,10 @@ inpainted = cv2.inpaint(cv_img, mask, inpaintRadius=7, flags=cv2.INPAINT_TELEA)
 result = Image.fromarray(cv2.cvtColor(inpainted, cv2.COLOR_BGR2RGBA))
 draw = ImageDraw.Draw(result)
 
-# 2. Draw 'MEDICAL ROOM'
-font_title = ImageFont.truetype(r"C:\Windows\Fonts\georgiab.ttf", 44)
+# 3. White Lettering with dark drop shadow (Same font, styling, and positioning as Transportation Annex)
+font_title1 = ImageFont.truetype(r"C:\Windows\Fonts\georgiab.ttf", 42)
+font_title2 = ImageFont.truetype(r"C:\Windows\Fonts\georgiab.ttf", 46)
+
 title_line1 = "MEDICAL"
 title_line2 = "ROOM"
 
@@ -40,50 +37,49 @@ def get_text_center(text, font, y_center):
     y = y_center - (th / 2)
     return x, y
 
-x1, y1 = get_text_center(title_line1, font_title, 235)
-x2, y2 = get_text_center(title_line2, font_title, 290)
+x1, y1 = get_text_center(title_line1, font_title1, 235)
+x2, y2 = get_text_center(title_line2, font_title2, 288)
+
+shadow_color = (25, 18, 15, 230)
+white_color = (255, 255, 255, 255)
 
 # Drop shadow
-shadow_color = (74, 16, 5, 200)
-main_color = (130, 25, 21, 255)
+for ox, oy in [(2, 2), (1, 2), (2, 1), (1, 1)]:
+    draw.text((x1 + ox, y1 + oy), title_line1, font=font_title1, fill=shadow_color)
+    draw.text((x2 + ox, y2 + oy), title_line2, font=font_title2, fill=shadow_color)
 
-for offset_x, offset_y in [(2, 2), (1, 1)]:
-    draw.text((x1 + offset_x, y1 + offset_y), title_line1, font=font_title, fill=shadow_color)
-    draw.text((x2 + offset_x, y2 + offset_y), title_line2, font=font_title, fill=shadow_color)
+# Pure white text
+draw.text((x1, y1), title_line1, font=font_title1, fill=white_color)
+draw.text((x2, y2), title_line2, font=font_title2, fill=white_color)
 
-draw.text((x1, y1), title_line1, font=font_title, fill=main_color)
-draw.text((x2, y2), title_line2, font=font_title, fill=main_color)
+# 4. Generate Room 8 QR code in center between birds
+cx = 382
+cy = 655
+r = 86
+qr_size = 120
 
-# 3. Generate QR code for Room 8
 qr = qrcode.QRCode(
     version=1,
     error_correction=qrcode.constants.ERROR_CORRECT_H,
-    box_size=10,
-    border=1,
+    box_size=12,
+    border=2,
 )
 qr.add_data(TARGET_URL)
 qr.make(fit=True)
-qr_img = qr.make_image(fill_color="#821915", back_color="#FFFFFF").convert("RGBA")
 
-# Center circle in the pot
-cx, cy = 381, 657
-r = 104
+img_qr = qr.make_image(fill_color="#821915", back_color="#FFFFFF").convert("RGBA")
+qr_res = img_qr.resize((qr_size, qr_size), Image.Resampling.LANCZOS)
 
-# Draw clean white circle
-draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(255, 255, 255, 255))
+# White round medallion with fine terracotta rim
+TERRACOTTA = (130, 25, 21, 255)
+draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=TERRACOTTA)
+draw.ellipse((cx - (r-2), cy - (r-2), cx + (r-2), cy + (r-2)), fill=(255, 255, 255, 255))
+result.paste(qr_res, (cx - qr_size//2, cy - qr_size//2), qr_res)
 
-# Resize QR and paste in center of the circle
-qr_size = 144
-qr_resized = qr_img.resize((qr_size, qr_size), Image.Resampling.LANCZOS)
-qx = cx - (qr_size // 2)
-qy = cy - (qr_size // 2)
-
-result.paste(qr_resized, (qx, qy), qr_resized)
-
-# Save output
-rgb_result = result.convert("RGB")
+# 5. Save poster files
 out_jpg = "qr_codes/medical_room_poster_placard.jpg"
 out_png = "qr_codes/medical_room_poster_placard.png"
+rgb_result = result.convert("RGB")
 rgb_result.save(out_jpg, quality=98)
 result.save(out_png)
 
@@ -92,4 +88,13 @@ artifact_dir = r"C:\Users\manet\.gemini\antigravity-ide\brain\6f34c999-2401-441a
 artifact_jpg = os.path.join(artifact_dir, "medical_room_poster_placard.jpg")
 rgb_result.save(artifact_jpg, quality=98)
 
-print(f"Successfully generated {out_jpg} and {artifact_jpg}")
+# Backup repo
+backup_dir = r"C:\Users\manet\.gemini\antigravity\scratch\deming-museum-ai-tour\qr_codes"
+if os.path.exists(backup_dir):
+    rgb_result.save(os.path.join(backup_dir, "medical_room_poster_placard.jpg"), quality=98)
+
+# Verify OpenCV scannability
+detector = cv2.QRCodeDetector()
+mat = cv2.imread(out_jpg)
+val, pts, _ = detector.detectAndDecode(mat)
+print(f"Medical Room Poster: Scannable? -> {bool(val)} | Decoded: '{val}'")
